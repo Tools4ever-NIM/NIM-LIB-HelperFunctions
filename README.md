@@ -9,7 +9,7 @@
 - Below sample of the code you can use to access the class if the variable name was "T4ELib"
 
 
-`
+```
 let lib = (new (variableGetValue('T4ELib'))() )
 return lib.cleanName("My Test string here")
-`
+```
