@@ -10,6 +10,6 @@
 
 
 ```
-let lib = (new (variableGetValue('T4ELib'))() )
-return lib.cleanName("My Test string here")
+let lib = variableGetValue('T4ELib');
+return lib.cleanName("My Test string here");
 ```
