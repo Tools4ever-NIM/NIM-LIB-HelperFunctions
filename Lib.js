@@ -54,4 +54,15 @@ return class {
   static generateRandomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + Iteration)) + min;
   }
+  
+  /* Returns a name with any suffixes removed. Example: "Thompson-Jones Jr." => "Thompson-Jones" */
+  static removeNameSuffixes(val){
+    let suffixArray = ['jr','i','ii','iii','sr','esq'];
+    let valArr = val.replace('.', '').split(' ');
+	
+    if (suffixArray.indexOf(valArr.at(-1).toLowerCase()) != -1) {
+	    	valArr.pop();
+    }
+    return valArr.join(" ");
+  }
 }
