@@ -21,6 +21,18 @@ return class {
     });
   }
 
+  /* Applies title casing to the value and capitalizes the characters following a specified prefix */
+  static titleCasePrefix(str, prefixes = []) {
+    return this.titleCase(str).split(' ').map((s) => {
+      prefixes.forEach((x) => {
+        if(s.toLowerCase().indexOf(x.toLowerCase()) === 0) {
+          s = `${s.substring(0,x.length)}${s.charAt(x.length).toUpperCase()}${s.substring(x.length + 1)}`;
+        }
+      });
+      return s;
+    }).join(' ');
+  }
+
   /* Removes the User CN from the CanoncalName */
   static cleanCanonicalName(canonicalName) {
     result = canonicalName.split('/');
