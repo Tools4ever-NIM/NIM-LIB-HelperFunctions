@@ -1,4 +1,4 @@
-# NIM-LIB-HelperFunctions
+# NIM-Library-HelperFunctions
 
 # Using Javascript Class in NIM
 - Create Global Javascript variable
