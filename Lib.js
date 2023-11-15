@@ -35,7 +35,7 @@ return class {
 
   /* Removes the User CN from the CanoncalName */
   static cleanCanonicalName(canonicalName) {
-    result = canonicalName.split('/');
+    let result = canonicalName.split('/');
     result.shift();
     result.pop();
     return `/${result.join('/')}`;
@@ -43,9 +43,9 @@ return class {
 
   /* Returns the text ordinal of the val */
   static getOrdinalSuffix(val) {
-    var x = Number(val) % 10,
+    let x = Number(val) % 10,
       y = Number(val) % 100;
-    var suffix = "th";
+    let suffix = "th";
 
     if (x == 1 && y != 11) {
       suffix = "st";
